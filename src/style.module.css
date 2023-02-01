@@ -4,6 +4,8 @@
     justify-content: center;
 }   
 .headline {
-    color: red;
+    color: black;
+    border-bottom:2px solid orangered
     
 }
+
