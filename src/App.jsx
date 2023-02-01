@@ -15,9 +15,6 @@ export function App() {
       </header>
       <div>
         <InputValues />
-        <button type="submit" onClick={handleSum}>
-          +
-        </button>
       </div>
     </div>
   );

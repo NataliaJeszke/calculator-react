@@ -4,9 +4,7 @@ import { Operations } from "../Operations/Operations";
 
 export function InputValues(props) {
   const [value1, setValue1] = useState();
-  console.log(`to jest value1 ${value1}`);
   const [value2, setValue2] = useState();
-  console.log(`to jest value2 ${value2}`);
 
   const handleSubmit = (e) => {
     e.preventDefault();
