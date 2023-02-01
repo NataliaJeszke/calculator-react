@@ -15,3 +15,9 @@ button:hover{
 button:active{
     background-color: #97bbe8
 }
+
+button{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+}
