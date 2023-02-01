@@ -8,14 +8,9 @@ export function InputValues(props) {
   const [value2, setValue2] = useState();
   console.log(`to jest value2 ${value2}`);
 
-  const first = props.value1;
-  const second = props.value2;
-
-  console.log("to są propsy"+first,second);
-
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className={inputStyle.inputContainer}>
@@ -27,8 +22,13 @@ export function InputValues(props) {
         type="number"
       />
       <h3>Type second value</h3>
-      <input value={value2} onChange={(e)=>setValue2(e.target.value)} className={inputStyle.inputBox} type="number" />
-      <Operations firstValue={value1} secondValue={value2}/>
+      <input
+        value={value2}
+        onChange={(e) => setValue2(e.target.value)}
+        className={inputStyle.inputBox}
+        type="number"
+      />
+      <Operations firstValue={value1} secondValue={value2} />
     </form>
   );
 }
