@@ -1,13 +1,34 @@
 import inputStyle from "./style.module.css";
-export function InputValues() {
+import { useState } from "react";
+import { Operations } from "../Operations/Operations";
 
+export function InputValues(props) {
+  const [value1, setValue1] = useState();
+  console.log(`to jest value1 ${value1}`);
+  const [value2, setValue2] = useState();
+  console.log(`to jest value2 ${value2}`);
+
+  const first = props.value1;
+  const second = props.value2;
+
+  console.log("to są propsy"+first,second);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+  }
 
   return (
-    <div className={inputStyle.inputContainer}>
+    <form onSubmit={handleSubmit} className={inputStyle.inputContainer}>
       <h3>Type first value</h3>
-      <input id="value1" value={this.state.value} className={inputStyle.inputBox} type="number" />
+      <input
+        value={value1}
+        onChange={(e) => setValue1(e.target.value)}
+        className={inputStyle.inputBox}
+        type="number"
+      />
       <h3>Type second value</h3>
-      <input id="value2" className={inputStyle.inputBox} type="number" />
-    </div>
+      <input value={value2} onChange={(e)=>setValue2(e.target.value)} className={inputStyle.inputBox} type="number" />
+      <Operations firstValue={value1} secondValue={value2}/>
+    </form>
   );
 }
