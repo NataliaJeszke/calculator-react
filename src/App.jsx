@@ -10,5 +10,6 @@ export function App(){
         <InputValues />
         <button type="submit" onClick={Operations}>+</button>
         </div>
+        <Operations />
     </div>
 }
