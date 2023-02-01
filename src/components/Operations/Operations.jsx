@@ -1,5 +1,5 @@
 import { useState } from "react";
-import operationStyle from './style.module.css'
+import operationStyle from "./style.module.css";
 
 export function Operations(props) {
   const firstValue = parseInt(props.firstValue);
@@ -8,19 +8,33 @@ export function Operations(props) {
   const [result, setResult] = useState(0);
 
   function getSum() {
-    setResult(firstValue + secondValue);
+    if (isNaN(firstValue) || isNaN(secondValue)) {
+      setResult("you need to input a number");
+    } else {
+      setResult(firstValue + secondValue);
+    }
   }
 
   function getSubstraction() {
-    setResult(firstValue - secondValue);
+    if (isNaN(firstValue) || isNaN(secondValue)) {
+      setResult("you need to input a number");
+    } else {
+      setResult(firstValue - secondValue);
+    }
   }
 
   function getMultiplication() {
-    setResult(firstValue * secondValue);
+    if (isNaN(firstValue) || isNaN(secondValue)) {
+      setResult("you need to input a number");
+    } else {
+      setResult(firstValue * secondValue);
+    }
   }
 
   function getSplit() {
-    if (secondValue === 0) {
+    if (isNaN(firstValue) || isNaN(secondValue)) {
+      setResult("you need to input a number");
+    } else if (secondValue === 0) {
       setResult("You cannot divide by 0");
     } else {
       setResult(firstValue / secondValue);

@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Operations } from "../Operations/Operations";
 
 export function InputValues(props) {
-  const [value1, setValue1] = useState();
-  const [value2, setValue2] = useState();
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();

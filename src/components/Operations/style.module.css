@@ -8,3 +8,10 @@
 .buttons{
     margin-top: 20px;
 }
+
+button:hover{
+    background-color:#bab6dc;
+}
+button:active{
+    background-color: #97bbe8
+}
