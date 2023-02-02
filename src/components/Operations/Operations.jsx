@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import operationStyle from "./style.module.css";
 
 export function Operations(props) {
@@ -40,6 +40,10 @@ export function Operations(props) {
       setResult(firstValue / secondValue);
     }
   }
+
+  useEffect(() => {
+    console.log(result);
+  }, [result]);
 
   return (
     <div className={operationStyle.operationsBox}>
