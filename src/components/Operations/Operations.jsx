@@ -7,6 +7,18 @@ export function Operations(props) {
 
   const [result, setResult] = useState(0);
 
+  const handleClick = (id) => {
+    if (id === "sum") {
+      getSum();
+    } else if (id === "sub") {
+      getSubstraction();
+    } else if (id === "multi") {
+      getMultiplication();
+    } else if (id === "split") {
+      getSplit();
+    }
+  };
+
   function getSum() {
     if (isNaN(firstValue) || isNaN(secondValue)) {
       setResult("you need to input a number");
@@ -40,18 +52,6 @@ export function Operations(props) {
       setResult(firstValue / secondValue);
     }
   }
-
-  const handleClick = (id) => {
-    if (id === "sum") {
-      getSum();
-    } else if (id === "sub") {
-      getSubstraction();
-    } else if (id === "multi") {
-      getMultiplication();
-    } else if (id === "split") {
-      getSplit();
-    }
-  };
 
   useEffect(() => {
     console.log(result);
