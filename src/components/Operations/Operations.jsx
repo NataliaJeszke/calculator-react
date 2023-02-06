@@ -8,13 +8,13 @@ export function Operations(props) {
   const [result, setResult] = useState(0);
 
   const handleClick = (id) => {
-    if (id === "sum") {
+    if (id === "Sum") {
       getSum();
-    } else if (id === "sub") {
+    } else if (id === "Sub") {
       getSubstraction();
-    } else if (id === "multi") {
+    } else if (id === "Multi") {
       getMultiplication();
-    } else if (id === "split") {
+    } else if (id === "Split") {
       getSplit();
     }
   };
@@ -60,16 +60,16 @@ export function Operations(props) {
   return (
     <div className={operationStyle.operationsBox}>
       <div className={operationStyle.buttons}>
-        <button id="sum" onClick={() => handleClick("sum")}>
+        <button id="Sum" onClick={() => handleClick("Sum")}>
           +
         </button>
-        <button id="sub" onClick={() => handleClick("sub")}>
+        <button id="Sub" onClick={() => handleClick("Sub")}>
           -
         </button>
-        <button id="multi" onClick={() => handleClick("multi")}>
+        <button id="Multi" onClick={() => handleClick("Multi")}>
           *
         </button>
-        <button id="split" onClick={() => handleClick("split")}>
+        <button id="Split" onClick={() => handleClick("Split")}>
           /
         </button>
       </div>
