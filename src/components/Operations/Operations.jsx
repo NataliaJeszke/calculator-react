@@ -41,6 +41,18 @@ export function Operations(props) {
     }
   }
 
+  const handleClick = (id) => {
+    if (id === "sum") {
+      getSum();
+    } else if (id === "sub") {
+      getSubstraction();
+    } else if (id === "multi") {
+      getMultiplication();
+    } else if (id === "split") {
+      getSplit();
+    }
+  };
+
   useEffect(() => {
     console.log(result);
   }, [result]);
@@ -48,10 +60,18 @@ export function Operations(props) {
   return (
     <div className={operationStyle.operationsBox}>
       <div className={operationStyle.buttons}>
-        <button onClick={getSum}>+</button>
-        <button onClick={getSubstraction}>-</button>
-        <button onClick={getMultiplication}>*</button>
-        <button onClick={getSplit}>/</button>
+        <button id="sum" onClick={() => handleClick("sum")}>
+          +
+        </button>
+        <button id="sub" onClick={() => handleClick("sub")}>
+          -
+        </button>
+        <button id="multi" onClick={() => handleClick("multi")}>
+          *
+        </button>
+        <button id="split" onClick={() => handleClick("split")}>
+          /
+        </button>
       </div>
       <p>Result is: {result}</p>
     </div>
